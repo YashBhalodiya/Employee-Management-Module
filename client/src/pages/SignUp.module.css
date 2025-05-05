@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+}
+
+.formLogin {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.formLogin > h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.formLogin > div {
+  margin-bottom: 20px;
+}
+
+.formLogin > div > div {
+  position: relative;
+}
+
+.formLogin input[type="text"],
+.formLogin input[type="email"],
+.formLogin input[type="password"] {
+  background: #f9f9f9;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 12px 40px;
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.formLogin input[type="text"]:focus,
+.formLogin input[type="email"]:focus,
+.formLogin input[type="password"]:focus {
+  border: 1px solid #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.unCompleted > input {
+  border: 1px solid #e74c3c !important;
+}
+
+.completed > input {
+  border: 1px solid #42ba96 !important;
+}
+
+.unCompleted::after,
+.completed::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.unCompleted::after {
+  background-image: url(../img/close.svg);
+}
+
+.completed::after {
+  background-image: url(../img/check.svg);
+}
+
+.formLogin input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #2575fc;
+  appearance: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.formLogin input[type="checkbox"]:checked {
+  background-color: #2575fc;
+  background-image: url("../img/tik.svg");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.formLogin input[type="checkbox"]:focus {
+  outline: none;
+  border: 2px solid #1a5bb8;
+}
+
+.formLogin > div > div img {
+  position: absolute;
+  max-width: 20px;
+  max-height: 20px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.formLogin ::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.formLogin > div span.error {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #e74c3c;
+  text-align: left;
+}
+
+.formLogin button[type="submit"] {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  background: #2575fc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.formLogin button[type="submit"]:hover {
+  background: #1a5bb8;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+.terms label {
+  color: #555;
+}
+
+.terms a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 568px) {
+  .formLogin {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .formLogin input[type="text"],
+  .formLogin input[type="email"],
+  .formLogin input[type="password"] {
+    padding: 12px 35px;
+  }
+}
